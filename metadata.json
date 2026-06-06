@@ -1,0 +1,6 @@
+{
+  "name": "Tag Explorer",
+  "description": "Discover random character and copyright tags from Danbooru, and save your favorites.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

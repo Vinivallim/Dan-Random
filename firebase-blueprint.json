@@ -1,0 +1,44 @@
+{
+  "entities": {
+    "Favorite": {
+      "title": "Favorite",
+      "description": "A character and copyright tag favorited by the user",
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "description": "Character tag name"
+        },
+        "copyright": {
+          "type": "string",
+          "description": "Copyright tag name"
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "Character image url"
+        },
+        "sourceUrl": {
+          "type": "string",
+          "description": "Url to original post"
+        },
+        "userId": {
+          "type": "string",
+          "description": "Firebase Auth user ID"
+        },
+        "createdAt": {
+          "type": "number",
+          "description": "Timestamp"
+        }
+      },
+      "required": ["character", "copyright", "imageUrl", "sourceUrl", "userId", "createdAt"]
+    }
+  },
+  "firestore": {
+    "users/{userId}/favorites/{favoriteId}": {
+      "schema": {
+        "$ref": "#/entities/Favorite"
+      },
+      "description": "Stores user's favorite tags"
+    }
+  }
+}
